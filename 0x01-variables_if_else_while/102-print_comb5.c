@@ -3,37 +3,38 @@
 /**
  * main - Entry point
  *
- * Description: write a program that prints all possible different combinations of two digits
+ * Description: a program to print all possible
+ * different combinations of two digits
  *
  * Return: 0
 */
 
 int main(void)
 {
-	int first = 0, second;
+	int firstDigit = 0, secondDigit;
 
-	while (first <= 99)
+	while (firstDigit <= 99)
 	{
-		second = first;
-		while (second <= 99)
+		secondDigit = firstDigit;
+		while (secondDigit <= 99)
 		{
-			if (second != first)
+			if (secondDigit != firstDigit)
 			{
-				putchar((first / 10) + 48);
-				putchar((first % 10) + 48);
+				putchar((firstDigit / 10) + 48);
+				putchar((firstDigit % 10) + 48);
 				putchar(' ');
-				putchar((second / 10) + 48);
-				putchar((second % 10) + 48);
+				putchar((secondDigit / 10) + 48);
+				putchar((secondDigit % 10) + 48);
 
-				if (first != 98 || second != 99)
+				if (firstDigit != 98 || secondDigit != 99)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			second++;
+			secondDigit++;
 		}
-		first++;
+		firstDigit++;
 	}
 	putchar('\n');
 
