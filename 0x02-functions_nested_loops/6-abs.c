@@ -2,6 +2,7 @@
 
 /**
  * _abs _ function that calculate the absolute value
+ * of an integer
  *
  * @n: takes an integer type input for function
  *
